@@ -76,8 +76,8 @@ class Worker(object):
         logging.debug('Start mapping process for %s', split)
         self.map_result = self.mr_module.map_engine(split, self.worker_job["reducer_num"])
         #Hack for debugging
-        if self.addr == "10.0.0.216:23000":
-            sys.exit(1)
+        #if self.addr == "10.0.0.216:23000":
+        #    sys.exit(1)
         #After the map job was done tell master
         try:
             logging.debug('Mapper %s call reducer for %s', self.addr, split)
